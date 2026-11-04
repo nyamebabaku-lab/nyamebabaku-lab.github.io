@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlockPilot</title>
+  <meta name="description" content="FlockPilot poultry farm management">
+  <meta name="theme-color" content="#0D5C45">
+  <meta http-equiv="refresh" content="0; url=https://flockpilot.vercel.app/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230D5C45'/%3E%3Cellipse cx='16' cy='17' rx='8' ry='10' fill='%23F5B301'/%3E%3C/svg%3E">
+  <script>
+    // FlockPilot runs on Vercel; this address only forwards to it, keeping any path, so /today opens Today.
+    var app = "https://flockpilot.vercel.app";
+    location.replace(app + location.pathname + location.search + location.hash);
+  </script>
+  <style>
+    :root { --bg: #0D5C45; --text: #ffffff; --soft: rgba(255,255,255,.8); --yolk: #F5B301; --yolk-ink: #3A2800; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100dvh; display: grid; place-items: center; padding: 24px 16px; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; overflow: hidden; }
+    .egg { position: fixed; right: -60px; top: -80px; width: 220px; height: 280px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; background: var(--yolk); transform: rotate(12deg); }
+    main { position: relative; max-width: 360px; text-align: center; }
+    h1 { margin: 0 0 8px; font-size: 32px; letter-spacing: -.02em; }
+    p { margin: 0 0 24px; color: var(--soft); }
+    a { display: inline-flex; min-height: 48px; align-items: center; padding: 0 24px; border-radius: 16px; background: var(--yolk); color: var(--yolk-ink); font-weight: 700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="egg" aria-hidden="true"></div>
+  <main>
+    <h1>FlockPilot</h1>
+    <p>Opening your farm…</p>
+    <a href="https://flockpilot.vercel.app/">Open FlockPilot</a>
+  </main>
+</body>
+</html>
