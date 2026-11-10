@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>VerseBeam</title>
+  <meta name="description" content="Project Bible verses from your phone to a screen or projector. Works offline.">
+  <meta name="theme-color" content="#0E1116">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="VerseBeam">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <main id="main">
+      <section id="tab-bible" class="tab">
+        <div class="reader-head">
+          <form id="searchForm" class="search" role="search">
+            <input id="search" type="search" placeholder="John 3:16, or search words" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Go to a verse or search">
+            <button type="button" id="versionBtn" class="chip" aria-label="Change Bible version"></button>
+          </form>
+          <div class="navrow">
+            <button type="button" id="bookBtn" class="pill"></button>
+            <button type="button" id="chapterBtn" class="pill"></button>
+            <span class="spacer"></span>
+            <button type="button" id="prevCh" class="icon-btn" aria-label="Previous chapter">‹</button>
+            <button type="button" id="nextCh" class="icon-btn" aria-label="Next chapter">›</button>
+          </div>
+        </div>
+        <div id="results" class="results" hidden></div>
+        <ol id="verses" class="verses"></ol>
+      </section>
+      <section id="tab-queue" class="tab" hidden></section>
+      <section id="tab-display" class="tab" hidden></section>
+      <section id="tab-library" class="tab" hidden></section>
+    </main>
+
+    <div id="selbar" class="bar selbar" hidden></div>
+    <div id="livebar" class="bar livebar" hidden></div>
+
+    <nav class="tabs" id="tabs" aria-label="Sections"></nav>
+  </div>
+
+  <div id="present" class="present" hidden>
+    <div id="presentStage" class="stage"></div>
+    <div id="presentHint" class="present-hint" hidden></div>
+    <div id="presentBar" class="present-bar" hidden>
+      <button type="button" data-act="exit">Exit</button>
+      <button type="button" data-act="prev" aria-label="Previous">‹</button>
+      <span id="presentInfo" class="present-info"></span>
+      <button type="button" data-act="next" aria-label="Next">›</button>
+      <button type="button" data-act="blank">Blank</button>
+    </div>
+  </div>
+
+  <dialog id="sheet" class="sheet"></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
